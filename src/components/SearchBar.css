@@ -1,0 +1,56 @@
+/* Centering the search bar */
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #1c1c1c, #333);
+  }
+  
+  /* Wrapper for search bar with icon */
+  .search-wrapper {
+    position: relative;
+    width: 50%;
+  }
+  
+  .search-wrapper .fa-search {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 20px;
+  }
+  
+  /* Styling the input box */
+  .search-input {
+    width: 100%;
+    padding: 15px 20px 15px 50px; /* Add padding-left for the icon */
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  /* Add placeholder styling */
+  .search-input::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+  
+  /* Input focus effect */
+  .search-input:focus {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .search-wrapper {
+      width: 80%;
+    }
+  }
+  
+  

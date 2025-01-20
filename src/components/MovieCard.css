@@ -1,0 +1,22 @@
+.movie-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .movie-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .movie-card p {
+    color: #666;
+  }
+  
