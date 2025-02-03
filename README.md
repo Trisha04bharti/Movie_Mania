@@ -66,6 +66,8 @@ vercel
 
 ---
 
+![Movie Mania Preview](./demo.png)
+
 
 
 
