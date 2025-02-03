@@ -1,13 +1,102 @@
-.App {
+/* Full page container */
+.app-container {
   text-align: center;
-  font-family: Arial, sans-serif;
-  padding: 20px;
-}
-
-.movie-list {
+  background: linear-gradient(to bottom, #1c1c1c, #333);
+  color: white;
+  min-height: 1000vh;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  flex-direction: column;
 }
 
+/* Header Section */
+/* .header-container {
+  padding-top: 20px;
+  background: linear-gradient(to right, #ff8c00, #ff4500);
+  padding-bottom: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+} */
+
+
+.header-container {
+  width: 100vw; /* Full width of the viewport */
+  height: 10vh; /* Full height of the viewport */
+  background: linear-gradient(to right, #ff8c00, #ff4500); /* Gradient background */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  color: white; /* Ensure text is visible */
+  text-align: center; /* Center text */
+  padding: 0; /* Remove any extra padding */
+}
+
+
+/* Title Styling */
+.app-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Content Section: Movies and Attractive Side */
+.content-container {
+  display: flex;
+  flex-direction: row;
+  height: 60vh;
+  margin-top: 20px;
+}
+
+/* Left Side: Movie Results */
+.movies-section {
+  flex: 1;
+  padding: 20px;
+  background-color: #222;
+  overflow-y: auto;
+  border-right: 2px solid #ff8c00;
+}
+
+/* Right Side: Attractive Visual Section */
+
+
+/* Tagline */
+.tagline {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Sub-text */
+.sub-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Loading and error message styling */
+.loading-text {
+  color: #f1c40f;
+  font-size: 1.2rem;
+}
+
+.error-text {
+  color: #e74c3c;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .movies-section {
+    border-right: none;
+    border-bottom: 2px solid #ff8c00;
+  }
+
+  .attractive-section {
+    padding: 20px;
+  }
+}

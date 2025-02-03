@@ -1,8 +1,10 @@
+// src/components/SearchBar.jsx
 import React, { useState, useCallback } from 'react';
 
 const SearchBar = ({ onSearch }) => {
   const [query, setQuery] = useState('');
 
+  // Debounce function to limit API calls
   const debounce = (func, delay) => {
     let timer;
     return (...args) => {
@@ -11,11 +13,12 @@ const SearchBar = ({ onSearch }) => {
     };
   };
 
+  // Use useCallback to avoid recreating the debounced function unnecessarily.
   const handleSearch = useCallback(
     debounce((value) => {
       onSearch(value);
     }, 500),
-    []
+    [onSearch]
   );
 
   const handleChange = (e) => {
@@ -24,9 +27,11 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div>
+    <div className="search-wrapper">
+      <i className="fa fa-search"></i>
       <input
         type="text"
+        className="search-input"
         placeholder="Search for movies..."
         value={query}
         onChange={handleChange}
@@ -36,6 +41,4 @@ const SearchBar = ({ onSearch }) => {
 };
 
 export default SearchBar;
-
-
 
